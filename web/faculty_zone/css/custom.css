@@ -1,0 +1,963 @@
+/* The Modal (background) */
+/* The Modal (background) */
+.modal {
+font-family: /* 'Istok Web' ,*/ "Helvetica", sans-serif;
+    font-size: 12px;
+    margin: 0;
+	 
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px 120px;
+   
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+#log { /* box formulaire */
+	background:
+	  radial-gradient(black 15%, transparent 16%) 0 0,
+	  radial-gradient(black 15%, transparent 16%) 8px 8px,
+	  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background:
+		-moz-radial-gradient(black 15%, transparent 16%) 0 0,
+		-moz-radial-gradient(black 15%, transparent 16%) 8px 8px,
+		-moz-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+		-moz-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background:
+		-webkit-radial-gradient(black 15%, transparent 16%) 0 0,
+		-webkit-radial-gradient(black 15%, transparent 16%) 8px 8px,
+		-webkit-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+		-webkit-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#373737;
+	background-size:16px 16px;
+	-webkit-background-size:16px 16px;
+	-moz-background-size:16px 16px;
+	-o-background-size:16px 16px;
+    height: 385px;
+    width: 485px;
+    margin: -175px 0 0 -240px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow:
+          0 0 2px rgba(0,0,0,0.5),
+          0 1px 1px rgba(0,0,0,0.5),
+          0 3px 0 #373737,
+          0 4px 0 rgba(0,0,0,0.5),
+          0 6px 0 #373737,
+          0 7px 0 rgba(0,0,0,0.5),
+          0 -10px 5px 10px rgba(0, 0, 0, 0.3) inset,
+          0 10px 10px 15px rgba(255, 255, 255, 0.1) inset;
+    -moz-box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.5),
+          1px 1px   0 rgba(0,0,0,0.5),
+          3px 3px   #373737,
+          4px 4px   0 rgba(0,0,0,0.5),
+          6px 6px   #373737,
+          7px 7px   0 rgba(0,0,0,0.5)
+          0 -10px 5px 10px rgba(0, 0, 0, 0.3) inset,
+          0 10px 10px 15px rgba(255, 255, 255, 0.1) inset;
+    box-shadow:
+          0 0 2px rgba(0, 0, 0, 0.5),
+          0 1px 1px rgba(0,0,0,0.5),
+          0 3px 0 #373737,
+          0 4px 0 rgba(0,0,0,0.5),
+          0 6px 0 #373737,
+          0 7px 0 rgba(0,0,0,0.5),
+          0 -10px 5px 10px rgba(0, 0, 0, 0.3) inset,
+          0 10px 10px 15px rgba(255, 255, 255, 0.1) inset;
+}
+#log:before { /* outer dashed lines or dotted lines code goes here */
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed rgba(143, 143, 143, 0.7);
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
+}
+#log:after{     /* ribbon ending tail of the ribbon codes goes here */
+	-moz-transform: none;
+    border-bottom: 28px solid transparent;
+    border-left: 28px solid #00c4c7;
+    border-right: 28px solid #00c4c7;
+    height: 60px;
+    position: absolute;
+    right: -28px;
+    width: 0;
+    top: 90px;
+    content: "";
+    display: block;
+    z-index: 20;
+}
+h1 {
+    text-transform:  capitalize;
+    text-align: right;
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font-size:35px;
+    letter-spacing: -0.06em;
+}
+#ff-proof.ribbon:after { /* botton ribbon which are bending at the middle of the ribbon codes goes here */
+    -moz-transform: none;
+    border-top: 55px solid transparent;
+    border-left: 55px solid #00c4c7;
+    border-right: 55px solid transparent;
+    height: 70px;
+    position: absolute;
+    right: -109px;
+    width: 0;
+    bottom: -18px;
+    content: "";
+    display: block;
+    z-index: 20;
+}
+.ribbon:before { /* shadow of the ribbon tail goes here */
+	transform: rotate(280deg);
+    -moz-transform: rotate(280deg);
+    -webkit-transform: rotate(280deg);
+    transform-origin: right bottom;
+    -webkit-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    border-top: 55px solid rgba(0, 0, 0, 0.3);
+    border-right: 55px solid transparent;
+    bottom: 30px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: -53px;
+    width: 20px;
+    z-index: 10;
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.3);
+}
+.ribbon { /* actual blue ribbon goes here mai string of the line  */
+    background-color: #00c4c7;
+    background-size:5px 5px,100% 100% ;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00c4c7), to(#14f1f5));
+    background-image: -webkit-linear-gradient(45deg , transparent 0%, transparent 25%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.15) 100%), rgba(0, 0, 0,.125) 20px),
+    -webkit-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: -moz-linear-gradient(45deg , transparent 0%, transparent 25%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.15) 100%),
+    -moz-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: -ms-linear-gradient(45deg , transparent 0%, transparent 25%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.15) 100%), rgba(0, 0, 0,.125) 20px),
+    -ms-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: -o-linear-gradient(45deg , transparent 0%, transparent 25%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.15) 100%), rgba(0, 0, 0,.125) 20px),
+    -o-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: linear-gradient(45deg , transparent 0%, transparent 25%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.15) 75%, rgba(0, 0, 0, 0.15) 100%), rgba(0, 0, 0,.125) 20px),
+    linear-gradient(top, #00c4c7, #14f1f5);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+    border-top-right-radius: 20px 5px;
+    color: #301607;
+    height: 55px;
+    width: 460px;
+    line-height: 55px;font-weight:bolder;
+    padding: 5px 5px 0 0;
+    margin-left: -32px;
+    position: relative;
+    text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 -25px 25px rgba(0, 0, 0, 0.2) inset, 0 0 0 2px rgba(255, 255, 255, 0.25) inset, 0 0 0 1px rgba(0, 0, 0, 0.75) inset, 0 2px 5px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.7),inset 4px 0 2px -1px rgba(0,0,0,0.3),0 -2px 5px rgba(0, 0, 0, 0.2) ;
+    -moz-box-shadow: 0 -25px 25px rgba(0, 0, 0, 0.2) inset, 0 0 0 2px rgba(255, 255, 255, 0.25) inset, 0 0 0 1px rgba(0, 0, 0, 0.75) inset, 0 2px 5px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.7),inset 4px 0 2px -1px rgba(0,0,0,0.3),0 -2px 5px rgba(0, 0, 0, 0.2) ;
+    -webkit-box-shadow: 0 -25px 25px rgba(0, 0, 0, 0.2) inset, 0 0 0 2px rgba(255, 255, 255, 0.25) inset, 0 0 0 1px rgba(0, 0, 0, 0.75) inset, 0 2px 5px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.7),inset 4px 0 2px -1px rgba(0,0,0,0.3),0 -2px 5px rgba(0, 0, 0, 0.2) ;
+}
+fieldset {
+    position: relative;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+fieldset#acton{
+	display: block;
+    height: 92px;
+    overflow: hidden;
+    position: relative;
+}
+fieldset#inpts{ /* input box of the username and the password og the pop up dialog box */
+	padding: 10px;
+    margin: 0px;
+    width: 420px;
+    background-color: #C8BCB6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#C8BCB6), to(#B3A39A));
+    background: -webkit-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .05) 20px),-webkit-linear-gradient(top, #C8BCB6, #B3A39A);
+    background: -moz-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.05) 10px, rgba(0, 0, 0, 0.05) 20px) repeat scroll 0 0%, -moz-linear-gradient(center top , #C8BCB6, #B3A39A);
+    background: -ms-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0,.05) 10px, rgba(0, 0, 0,.05) 20px),-ms-linear-gradient(top, #C8BCB6, #B3A39A);
+    background: -o-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0,.05) 10px, rgba(0, 0, 0,.05) 20px),-o-linear-gradient(top, #C8BCB6, #B3A39A);
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0,.05) 10px, rgba(0, 0, 0,.05) 20px),linear-gradient(top, #C8BCB6, #B3A39A);
+    -moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 2px #1F1F1F inset;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 2px #1F1F1F inset;
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 2px #1F1F1F inset;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+@media screen and (-webkit-animation) {fieldset#inpts:before {width: 440px!important;}}
+fieldset#inpts:before{ /* dashed outer lines of the inputs fields of the username and the password */
+	content: "";
+	padding: 0px;
+    margin: -16px -32px;
+	width: 431px;
+	height: 159px;
+	position: absolute;
+	border: 1px dashed rgba(143, 143, 143,0.7);
+	-moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+	-webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+	z-index: -1;
+}
+#inpts input { /* pictos des inpts */
+    background: #f1f1f1 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABkCAYAAACPQLC2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAhtJREFUeNrsV1FuwjAMbRECBAIqxD+7ARyhOwE9QvfDd28wbrB+8wNHaG9QblBuAP9IzeADAYLOntwqZQlk6z6mKZEMkRO/2o7T+plpmhplRsUoOTSABtAA/wagij+z2ayg7Pf7XfgLQGxSRSDOdrt95/dNJhOxB9frNQCxQQwSnAdSD24HvOZsgdpWzgG+J0ViWdZAFSASAESMsY0qgIMGWQ4I0FHOwW63w2w/t9vtwX6/3yjVQbPZ7IK8tVqtFCSBeW6Mc9ThGu6RheCDeBSvBfMptzZFHX2EPACZFwAajcYYYnW5c0dxQT9EkayN8xwAsisJMb4TPtqEGYDzg2vg5B6gW6UuU5kvdOVO5T2SiAfAyluAMAVDRns/c2DqBkMDaAANoAE0gAbQAH+PsdyyFQFz8amls0jNSOcjg6nKjHu93gDav5gzzEbWBjuwx5aGQI2UxTdYMBZoCPMYZATiCT0AZjIU0Z4kSV5o3SBS5slIly1q8TqdzpDWnayrl5EuS9L+xUBCGL8uA4junByfVCYDcBXLIPiSA2QjCEAxxg9a3mnBA2Ahc2QjHN21JU9em6bpHA6HTQ5Qr9fnnOuZ8ZrOHgtqlCXyeDyGBb5Qq9VExp+s5HQ6rWgeCu8CjFeB2wxc9M/n8+rhZeIqLn8yxgfGS6XbSAWx5t2+XC5L5fcBHckTHYsH4YTfeR9oxqIBNIAG+DWADwEGAAgZ5RSSVu1LAAAAAElFTkSuQmCC) no-repeat;
+    padding: 15px 15px 15px 30px;
+    margin: 0 0 10px 5px;
+    width: 90%;
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #525252 inset, 0 1px 0 #6A6A6A;
+    -webkit-box-shadow: 0 1px 1px #525252 inset, 0 1px 0 #6A6A6A;
+    box-shadow: 0 1px 1px #525252 inset, 0 1px 0 #6A6A6A;
+	
+}
+#username {
+    background-position: 5px -2px !important;
+}
+#password {
+    background-position: 5px -52px !important;
+}
+#inpts input:focus {
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+    -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+/*--------------------*/
+#acton {
+    margin: 25px 0 0 0;
+}
+#submit {/* bouton de connection */
+    background-color: #ffb94b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00c4c7), to(#14f1f5));
+    background-image: -webkit-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: -moz-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: -ms-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: -o-linear-gradient(top, #00c4c7, #14f1f5);
+    background-image: linear-gradient(top, #00c4c7, #14f1f5);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0,0.7);
+     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 17px 2px rgba(255, 255, 255, 0.2) inset, 0 5px 5px rgba(255, 255, 255, 0.2) inset;
+     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 17px 2px rgba(255, 255, 255, 0.2) inset, 0 5px 5px rgba(255, 255, 255, 0.2) inset;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 17px 2px rgba(255, 255, 255, 0.2) inset, 0 5px 5px rgba(255, 255, 255, 0.2) inset;
+    display: block;
+    border: none;
+	position: relative;
+    float: none;
+    height: 35px;
+    padding: 0;
+    margin: 0 auto 20px;
+    width: 120px;
+    cursor: pointer;
+    font-size:18px ;
+    color: #FFF;
+	font-weight:bolder;
+    text-transform:  capitalize;
+}
+#submit:hover,#submit:focus {
+    background-color: #00c4c7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#14f1f5), to(#00c4c7));
+    background-image: -webkit-linear-gradient(top, #14f1f5, #00c4c7);
+    background-image: -moz-linear-gradient(top, #14f1f5, #00c4c7);
+    background-image: -ms-linear-gradient(top, #14f1f5, #00c4c7);
+    background-image: -o-linear-gradient(top, #14f1f5, #00c4c7);
+    background-image: linear-gradient(top, #14f1f5, #00c4c7);
+}
+#submit:active {
+    outline: none;
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+#submit::-moz-focus-inner {border: none;}
+#acton a {
+    color: #000000;
+    float: none;
+    line-height: 35px;
+    margin-left: 5px;
+    text-decoration: none;
+	font-size:12px;
+	font-weight:bolder;
+}
+#acton a:hover{color: #FFFFFF;text-decoration: underline;}
+
+.option {
+	margin: auto;
+    width: 250px;
+	background-color: #C8BCB6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#C8BCB6), to(#B3A39A));
+    background: -webkit-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, .05) 10px, rgba(0, 0, 0, .05) 20px),-webkit-linear-gradient(top, #C8BCB6, #B3A39A);
+    background: -moz-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.05) 10px, rgba(0, 0, 0, 0.05) 20px) repeat scroll 0 0%, -moz-linear-gradient(center top , #C8BCB6, #B3A39A);
+    background: -ms-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0,.05) 10px, rgba(0, 0, 0,.05) 20px),-ms-linear-gradient(top, #C8BCB6, #B3A39A);
+    background: -o-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0,.05) 10px, rgba(0, 0, 0,.05) 20px),-o-linear-gradient(top, #C8BCB6, #B3A39A);
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0,.05) 10px, rgba(0, 0, 0,.05) 20px),linear-gradient(top, #C8BCB6, #B3A39A);
+    -moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 2px #1F1F1F inset;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 2px #1F1F1F inset;
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.5) inset, 0 2px 2px 2px #1F1F1F inset;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.option:after{
+	content: "";
+	width: 260px;
+	height: 40px;
+	left: 82px;
+	top: 50px;
+	position: absolute;
+	border: 1px dashed rgba(143, 143, 143,0.7);
+	border-bottom: none;
+	-moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+	-webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8),0 0 1px 1px rgba(0, 0, 0, 0.5) inset;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+	z-index: -1;
+}
+.apple 
+{
+    background: #00c4c7; /* foreground color */
+}
+ 
+.apple {
+    width: 25.06px;
+    height: 20.2px;
+    border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%;
+    position: absolute;
+    margin: 0px;
+    right: -13px;
+    top: 80px;
+    z-index: 100;
+}
+ 
+ 
+.forgot
+{
+color:red;
+text-decoration:blik;
+}
+ 
+.register
+{
+color:green;
+}
+.register:hover , .forgot:hover
+{
+color:white;
+transition: 0.8s;
+}
+
+
+/* The Close Button */
+.close { 
+  color: white;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  cursor:pointer;  
+  position: absolute; 
+  font-weight: bold;  
+}
+ 
+.close:hover,
+.close:focus {
+  color: red; 
+  font-size:50px;
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: rotate(90deg);  
+  
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+/* GLOWING TEXT STARTS HERE OF THE POP LOGIN PAGE AND THE REGISTRATION PAGE GOES HERE!! */
+
+.glow {
+    
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* glowing text closes here */
+
+
+/* time box of the about page starts here */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* timebox around contentbox */
+.timebox {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timebox::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: red;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the timebox to the left */
+.lft {
+  left: 0;
+}
+
+/* Place the timebox to the right */
+.rgt {
+  left: 50%;
+}
+
+/* Add arrows to the left timebox (pointing right) */
+.lft::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #00c4c7;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #00c4c7;
+}
+
+/* Add arrows to the right timebox (pointing left) */
+.rgt::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #00c4c7;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #00c4c7 transparent transparent;
+}
+
+/* Fix the circle for timeboxs on the right side */
+.rgt::after {
+  left: -16px;
+}
+
+/* The actual contentbox */
+.contentbox {
+  padding: 20px 30px;
+  background-color: #00c4c7;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width timeboxs */
+  .timebox {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .timebox::before {
+  left: 60px;
+  border: medium solid red;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent red transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .lft::after, .rgt::after {
+  left: 15px;
+  }
+  
+  /* Make all right timeboxs behave like the left ones */
+  .rgt {
+  left: 0%;
+  }
+}
+
+/* time box of the about page ends here */
+
+/* slider transparent fonts code starts here */
+
+.text {
+  background-color: rgba(47, 56, 56,0.01);
+  color: black;
+  font-family: 'Bungee Inline', cursive;
+  font-stretch:expanded;
+  font-size: 10vw; 
+  font-weight: bolder;
+  margin: 20 auto;
+  padding: 50px;
+  width: 95%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+/* glowing text goes here */
+.glower {
+    
+  text-align: center;
+  -webkit-animation: glower 1s ease-in-out infinite alternate;
+  -moz-animation: glower 1s ease-in-out infinite alternate;
+  animation: glower 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glower {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0badbf, 0 0 40px #0badbf, 0 0 50px #0badbf, 0 0 60px #0badbf, 0 0 70px #0badbf;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #4dffff, 0 0 40px #4dffff, 0 0 50px #4dffff, 0 0 60px #4dffff, 0 0 70px #4dffff, 0 0 80px #4dffff;
+  }
+}
+
+/* glowing text closes here */
+
+.txt {
+  background-color: rgba(47, 56, 56,0.01);
+  color: black;
+  font-family: 'Orbitron', sans-serif;
+  font-stretch:ultra-condensed;
+  font-size: 3vw; 
+  font-weight: bolder;
+  margin: 0 auto;
+  padding: 350px 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+/* slider transparent font goes to end here!! */
+
+
+/* registration from codes goes to start here!! */
+
+.reg_form {
+    
+   
+    background-position: center center;
+    min-height: 650px;
+    padding: 80px 0;
+}
+
+.field input {
+    width: 100%;
+    background: #0e0606;
+    min-height: 65px;
+    border: none;
+    margin: 15px 0;
+    color: #fff;
+    padding: 0 25px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.field textarea {
+    width: 100%;
+    background: #0e0606;
+    min-height: 120px;
+    border: none;
+    margin: 15px 0;
+    color: #fff;
+    padding: 25px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.reg_form_inner button {
+    width: 210px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    color: #050000;
+    line-height: 62px;
+    cursor: pointer;
+    transition: ease all 0.5s;
+}
+
+
+.reg_form_inner button:hover,
+.reg_form_inner button:focus {
+    color: #fff;
+    background: #050000;
+}
+
+ 
+
+
+
+/* registration from codes goes to end here!! */
+
+
+/* feature list codes goes to start here!! */
+
+
+.start_feature_bt {
+    border: solid #fff 1px;
+    color: #fff;
+    padding: 15px 40px;
+    margin:0 auto; 
+    width: 220px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* feature list icons code starts */
+
+	 .icon-round-border {
+    border: 10px double #1A94C4;
+    color: #2f9484;
+    text-align: center;
+    padding-top: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+	margin:30px auto;
+	 
+    }
+
+    .icon-round-border:hover {
+        color: #fff;
+        border: 10px double #fff;
+        background-color: #1A94C4;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+    }
+	
+
+/* feature list  icons codes goes to end here!! */
+ 
+
+/* feature lists codes goes to end here!! */
+
+
+/* parallax contact background codes goes to start here!! */
+
+	
+	.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 120px 0;
+    position: relative;
+    width: 100%;
+}
+
+.parallax.parallax-off {
+    background-attachment: fixed !important;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-position: center center;
+    vertical-align: sub;
+    width: 100%;
+    z-index: 2;
+}
+
+.no-scroll-xy {
+    overflow: hidden !important;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+ 
+ 
+#contact_bcg{
+	position: relative;
+}
+#contact_bcg:before{
+	background: rgba(0,0,0,0.8);
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+ 
+
+/* parallax contact background codes goes to end here!! */
+
+
+
+/* registration or signup box codes goes to start here!! */
+
+.regbox 
+{
+	background: rgba(0,0,0,1 );	
+	color:white;
+	font-size:20px; 
+     
+	
+}
+.regbox:hover 
+{
+	transition :0.8s; 
+    box-shadow: 10px 10px 10px #00c4c7;
+	 
+}
+ 
+.reginput input {
+  width:100%;
+   
+  display:block;
+  background-color:transparent;
+  border:0px solid transparent;
+  border-bottom:1px solid rgba(10,250,252,1);
+  font-size:20px;
+  color:white;
+   text-align:center;
+}
+
+ 
+.reginput textarea {
+  width:100%;
+   
+  display:block;
+  background-color:transparent;
+  border:0px solid transparent;
+  border-bottom:1px solid rgba(10,250,252,1);
+  font-size:20px;
+  color:white;
+  text-align:center;
+}
+.reginput select {
+  width:100%;
+   
+  display:block;
+  background-color:transparent;
+  border:0px solid transparent;
+  border-bottom:1px solid rgba(10,250,252,1);
+  font-size:20px;
+  color:white;
+  text-align:center;
+}
+.reginput button {
+    
+  background-color:transparent;
+  border:0px solid transparent;
+  border :1px solid rgba(10,250,252,1);
+  font-size:20px;
+  color:white;
+  text-align:center;
+  cursor:pointer;
+  width:200px;
+}
+ 
+ 
+#login {
+  -webkit-transition: all 300ms ease-out 0s;
+  -moz-transition: all 300ms ease-out 0s;
+  -o-transition: all 300ms ease-out 0s;
+  transition: all 300ms ease-out 0s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:100%;
+  margin-top:25px;
+  padding:15px;
+  background-color:grey;
+  border:1px solid grey;
+  color:rgba(10,250,252,1);
+  cursor:pointer;
+}
+
+#login:hover {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color:transparent;
+  color:rgba(10,250,252,0.35);
+  border:1px solid rgba(10,250,252,1);
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(110,250,252,0.55);
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(110,250,252,0.55);
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(110,250,252,0.55);
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(110,250,252,0.55);
+}
+
+ 
+
+/* registration or signup  codes goes to end here!! */
+
+
+
+
+/* get to know section  codes goes to start here!! */
+
+
+.grey-box-icon {
+background: #f6f6f6;
+padding: 15px 20px 20px 20px;
+text-align: center;
+margin-top: 113px;
+position: relative;
+ 
+}
+
+.grey-box-icon-pos {
+    margin-top: -88px;
+    margin-bottom: 31px;
+	   
+}
+
+.grey-box-icon:hover .fontawesome-icon.circle-white {
+background-color: #f6f6f6;
+color: #697277;
+-moz-transition: all .2s ease-in;
+-webkit-transition: all .2s ease-in;
+-o-transition: all .2s ease-in;
+transition: all .2s ease-in;
+}
+
+
+
+
+/* get to know section  codes goes to end here!! */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
